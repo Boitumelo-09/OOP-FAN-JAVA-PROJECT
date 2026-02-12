@@ -17,9 +17,9 @@
 
 public class Fan {
 
-    private  String make ;
+    private final String make ;
     private final double radius;
-    private  String color;
+    private final String color;
     private  boolean isOn = false;
     private  boolean isOff = true;
     private  int speed = 0;
@@ -40,7 +40,7 @@ public class Fan {
 
 
     public String getMake() {
-        return make;
+        return make.substring(0,1).toUpperCase().concat(make.substring(1).toLowerCase());
     }
 
     public double getRadius() {
