@@ -1,4 +1,3 @@
-
 //Inheritance Basics
 //public class Person name, phone, email;
 //Student
@@ -16,6 +15,11 @@ public class Employee extends Person {
     private String employeeGrade;
     private double employeeSalary;
 
+    public Employee(String name, double salary) {
+        super(name);
+        this.employeeSalary = employeeSalary;
+        IO.println("Employee Constructor Just Got Called...");
+    }
 
     public double getEmployeeSalary() {
         return employeeSalary;
@@ -26,7 +30,6 @@ public class Employee extends Person {
     }
 
 
-
     public String getEmployeeGrade() {
         return employeeGrade;
     }
@@ -34,7 +37,6 @@ public class Employee extends Person {
     public void setEmployeeGrade(String employeeGrade) {
         this.employeeGrade = employeeGrade.toUpperCase();
     }
-
 
 
     public String getEmployeeJobTitle() {
@@ -49,11 +51,11 @@ public class Employee extends Person {
     @Override
     public String toString() {
         return "----- Employee Details -----" +
-                "\nName : "+getName() +
-                "\nPhone : "+getPhone()+
-                "\neMail : "+getEmail() +
-                "\nJob Title : "+getEmployeeJobTitle()+
-                "\nSalary : "+getEmployeeSalary() +
-                "\nGrade : "+getEmployeeGrade() ;
+                "\nName : " + getName() +
+                "\nPhone : " + getPhone() +
+                "\neMail : " + getEmail() +
+                "\nJob Title : " + getEmployeeJobTitle() +
+                "\nSalary : " + getEmployeeSalary() +
+                "\nGrade : " + getEmployeeGrade();
     }
 }

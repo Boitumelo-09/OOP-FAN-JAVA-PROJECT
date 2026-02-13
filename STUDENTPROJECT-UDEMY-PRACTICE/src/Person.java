@@ -9,10 +9,14 @@
 //salary
 //toString (print all values including those of Person)
 
-public class Person  {
-      private String name;
-      private String phone;
-      private String email;
+public class Person {
+    private String name;
+    private String phone;
+    private String email;
+
+    public Person(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
